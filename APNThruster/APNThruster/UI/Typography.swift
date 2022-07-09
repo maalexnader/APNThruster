@@ -10,7 +10,7 @@ import SwiftUI
 enum Typography {
     case heading
     case subheading
-    case caption
+    case code
     case body
     case footnote
     
@@ -20,7 +20,7 @@ enum Typography {
             return Font.system(size: 20, weight: .semibold)
         case .subheading:
             return Font.system(size: 16, weight: .semibold)
-        case .caption:
+        case .code:
             return Font.custom("SFMono-Regular", size: 14)
         case .body:
             return Font.system(size: 16, weight: .regular)

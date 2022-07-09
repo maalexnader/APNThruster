@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Main: View {
-    @State private var x = ""
-    @State private var y = ""
+    @ObservedObject var model: MainViewModel
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Let's push things forward!")
@@ -22,17 +22,20 @@ struct Main: View {
                             .typography(.subheading)
                             .foregroundColor(.textPrimary)
                         VStack(alignment: .leading, spacing: 20) {
-                            Input(title: "title", value: x)
-                            Input(title: "subtitle", value: y)
-                            Input(title: "body", value: x)
+                            Input(title: "title", value: $model.alertTitle)
+                            Input(title: "subtitle", value: $model.alertSubtitle)
+                            Input(title: "body", value: $model.alertBody)
                         }
                         .padding(.leading, 8)
                         .padding(.top, 4)
                     }
                     VStack(spacing: 20) {
-                        Input(title: "badge", value: x)
-                        Input(title: "sound", value: x)
+                        Input(title: "badge", value: $model.badge)
+                        Input(title: "sound", value: $model.sound)
                     }
+                }
+                Button("Push") {
+                    model.handlePush()
                 }
             }
             Spacer()
@@ -53,7 +56,7 @@ struct Main: View {
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
-            Main()
+            Main(model: MainViewModel())
                 .frame(width: 430, height: 710)
                 .preferredColorScheme($0)
         }

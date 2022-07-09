@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81067F4E2873733500B56A82 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81067F4D2873733500B56A82 /* MainViewModel.swift */; };
 		81174C9D286F2D6F0090D7AA /* APNThrusterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81174C9C286F2D6F0090D7AA /* APNThrusterApp.swift */; };
 		81174C9F286F2D6F0090D7AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81174C9E286F2D6F0090D7AA /* MainView.swift */; };
 		81174CA1286F2D720090D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81174CA0286F2D720090D7AA /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */; };
 		8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD8028706A5E00FCC369 /* InputElement.swift */; };
 		8137CD83287219F900FCC369 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD82287219F900FCC369 /* Color+.swift */; };
+		81657E7F2879FFF700443D41 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E7E2879FFF700443D41 /* Encoder.swift */; };
+		81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E80287A00CE00443D41 /* APJSONEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81067F4D2873733500B56A82 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		81174C99286F2D6F0090D7AA /* APNThruster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APNThruster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81174C9C286F2D6F0090D7AA /* APNThrusterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNThrusterApp.swift; sourceTree = "<group>"; };
 		81174C9E286F2D6F0090D7AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInputStyle.swift; sourceTree = "<group>"; };
 		8137CD8028706A5E00FCC369 /* InputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputElement.swift; sourceTree = "<group>"; };
 		8137CD82287219F900FCC369 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		81657E7E2879FFF700443D41 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		81657E80287A00CE00443D41 /* APJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APJSONEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81067F4C2873732700B56A82 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				81174C9E286F2D6F0090D7AA /* MainView.swift */,
+				81067F4D2873733500B56A82 /* MainViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		81174C90286F2D6F0090D7AA = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +171,7 @@
 		81174CCF286F2FAE0090D7AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				81657E7D2879FFDC00443D41 /* Encoder */,
 				81174CC7286F2D800090D7AA /* Domain */,
 			);
 			path = Core;
@@ -176,7 +192,7 @@
 		81174CD4286F919D0090D7AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				81174C9E286F2D6F0090D7AA /* MainView.swift */,
+				81067F4C2873732700B56A82 /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +203,15 @@
 				8137CD8028706A5E00FCC369 /* InputElement.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		81657E7D2879FFDC00443D41 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				81657E7E2879FFF700443D41 /* Encoder.swift */,
+				81657E80287A00CE00443D41 /* APJSONEncoder.swift */,
+			);
+			path = Encoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +352,15 @@
 			files = (
 				81174CD6286F964E0090D7AA /* Typography.swift in Sources */,
 				8137CD83287219F900FCC369 /* Color+.swift in Sources */,
+				81657E7F2879FFF700443D41 /* Encoder.swift in Sources */,
 				81174C9F286F2D6F0090D7AA /* MainView.swift in Sources */,
 				8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */,
 				81174C9D286F2D6F0090D7AA /* APNThrusterApp.swift in Sources */,
 				81174CD3286F2FE20090D7AA /* Text+Typography.swift in Sources */,
 				8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */,
+				81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */,
 				81174CC9286F2D9D0090D7AA /* Notification.swift in Sources */,
+				81067F4E2873733500B56A82 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

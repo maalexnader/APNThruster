@@ -14,7 +14,7 @@ struct APNThrusterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Main()
+            Main(model: MainViewModel())
                 .frame(
                     minWidth: width * 0.7,
                     idealWidth: width,

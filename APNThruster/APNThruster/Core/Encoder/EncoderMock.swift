@@ -1,15 +1,17 @@
 //
-//  APJSONEncoder.swift
+//  EncoderMock.swift
 //  APNThruster
 //
-//  Created by Alexander Martirosov on 09/07/2022.
+//  Created by Alexander Martirosov on 10/07/2022.
 //
 
 import Foundation
 
-final class APJSONEncoder: Encoder {
+final class EncoderMock: Encoder {
+    private let encoder = JSONEncoder()
+    
     func encode<T>(_ item: T) throws -> String where T : Encodable {
-        let encodedItem = try JSONEncoder().encode(item)
+        let encodedItem = try encoder.encode(item)
         guard let encodedString = String(data: encodedItem, encoding: .utf8) else {
             return ""
         }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Color {
-    static let textPrimary: Color = Color("textPrimary")
     static let backgroundPrimary: Color = Color("backgroundPrimary")
+    static let backgroundInverted: Color = Color("backgroundInverted")
+    static let textPrimary: Color = Color("textPrimary")
+    static let textInverted: Color = Color("textInverted")
 }

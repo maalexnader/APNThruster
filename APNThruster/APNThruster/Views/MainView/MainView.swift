@@ -17,6 +17,7 @@ struct Main: View {
                 .foregroundColor(.textPrimary)
             ScrollView {
                 VStack(spacing: 24) {
+                    Input(title: "device", value: $model.device)
                     VStack(alignment: .leading) {
                         Text("alert")
                             .typography(.subheading)
@@ -34,9 +35,17 @@ struct Main: View {
                         Input(title: "sound", value: $model.sound)
                     }
                 }
-                Button("Push") {
-                    model.handlePush()
+                Button(action: model.handlePush) {
+                    Text("Push")
+                        .typography(.subheading)
+                        .foregroundColor(.textInverted)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 48, maxHeight: 48,  alignment: .center)
+                        .background(Color.backgroundInverted)
+                        .cornerRadius(12)
                 }
+                .buttonStyle(.plain)
+                .padding(.vertical)
+
             }
             Spacer()
             HStack {
@@ -56,9 +65,15 @@ struct Main: View {
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
-            Main(model: MainViewModel())
-                .frame(width: 430, height: 710)
-                .preferredColorScheme($0)
+            Main(
+                model:
+                    MainViewModel(
+                        encoder: EncoderMock(),
+                        fileManager: FileManagerMock()
+                    )
+            )
+            .frame(width: 430, height: 710)
+            .preferredColorScheme($0)
         }
     }
 }

@@ -19,11 +19,17 @@
 		81174CCC286F2E1A0090D7AA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 81174CCB286F2E1A0090D7AA /* Swinject */; };
 		81174CD3286F2FE20090D7AA /* Text+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81174CD2286F2FE20090D7AA /* Text+Typography.swift */; };
 		81174CD6286F964E0090D7AA /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81174CD5286F964E0090D7AA /* Typography.swift */; };
+		8129F1A6287B26F700913166 /* EncoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129F1A5287B26F700913166 /* EncoderMock.swift */; };
+		8129F1A9287B283100913166 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129F1A8287B283100913166 /* FileManager.swift */; };
+		8129F1AB287B295000913166 /* APFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129F1AA287B295000913166 /* APFileManager.swift */; };
+		8129F1AD287B2B5A00913166 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129F1AC287B2B5A00913166 /* FileManagerMock.swift */; };
+		8129F1B0287B3D2200913166 /* APShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129F1AF287B3D2200913166 /* APShell.swift */; };
 		8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */; };
 		8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD8028706A5E00FCC369 /* InputElement.swift */; };
 		8137CD83287219F900FCC369 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD82287219F900FCC369 /* Color+.swift */; };
 		81657E7F2879FFF700443D41 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E7E2879FFF700443D41 /* Encoder.swift */; };
 		81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E80287A00CE00443D41 /* APJSONEncoder.swift */; };
+		81C96CF5287EDA8700E8E132 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C96CF4287EDA8700E8E132 /* Preset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +65,17 @@
 		81174CC8286F2D9D0090D7AA /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		81174CD2286F2FE20090D7AA /* Text+Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Typography.swift"; sourceTree = "<group>"; };
 		81174CD5286F964E0090D7AA /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		8129F1A5287B26F700913166 /* EncoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderMock.swift; sourceTree = "<group>"; };
+		8129F1A8287B283100913166 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		8129F1AA287B295000913166 /* APFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APFileManager.swift; sourceTree = "<group>"; };
+		8129F1AC287B2B5A00913166 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		8129F1AF287B3D2200913166 /* APShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APShell.swift; sourceTree = "<group>"; };
 		8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInputStyle.swift; sourceTree = "<group>"; };
 		8137CD8028706A5E00FCC369 /* InputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputElement.swift; sourceTree = "<group>"; };
 		8137CD82287219F900FCC369 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		81657E7E2879FFF700443D41 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		81657E80287A00CE00443D41 /* APJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APJSONEncoder.swift; sourceTree = "<group>"; };
+		81C96CF4287EDA8700E8E132 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				81174CC8286F2D9D0090D7AA /* Notification.swift */,
+				81C96CF4287EDA8700E8E132 /* Preset.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -171,6 +184,8 @@
 		81174CCF286F2FAE0090D7AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8129F1AE287B3D1100913166 /* Shell */,
+				8129F1A7287B27AC00913166 /* FileManager */,
 				81657E7D2879FFDC00443D41 /* Encoder */,
 				81174CC7286F2D800090D7AA /* Domain */,
 			);
@@ -197,6 +212,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8129F1A7287B27AC00913166 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				8129F1A8287B283100913166 /* FileManager.swift */,
+				8129F1AC287B2B5A00913166 /* FileManagerMock.swift */,
+				8129F1AA287B295000913166 /* APFileManager.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		8129F1AE287B3D1100913166 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				8129F1AF287B3D2200913166 /* APShell.swift */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
 		8137CD7F287069D200FCC369 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +243,7 @@
 			children = (
 				81657E7E2879FFF700443D41 /* Encoder.swift */,
 				81657E80287A00CE00443D41 /* APJSONEncoder.swift */,
+				8129F1A5287B26F700913166 /* EncoderMock.swift */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
@@ -351,16 +385,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				81174CD6286F964E0090D7AA /* Typography.swift in Sources */,
+				8129F1B0287B3D2200913166 /* APShell.swift in Sources */,
 				8137CD83287219F900FCC369 /* Color+.swift in Sources */,
+				81C96CF5287EDA8700E8E132 /* Preset.swift in Sources */,
 				81657E7F2879FFF700443D41 /* Encoder.swift in Sources */,
 				81174C9F286F2D6F0090D7AA /* MainView.swift in Sources */,
 				8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */,
 				81174C9D286F2D6F0090D7AA /* APNThrusterApp.swift in Sources */,
 				81174CD3286F2FE20090D7AA /* Text+Typography.swift in Sources */,
 				8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */,
+				8129F1AB287B295000913166 /* APFileManager.swift in Sources */,
+				8129F1A9287B283100913166 /* FileManager.swift in Sources */,
 				81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */,
 				81174CC9286F2D9D0090D7AA /* Notification.swift in Sources */,
+				8129F1A6287B26F700913166 /* EncoderMock.swift in Sources */,
 				81067F4E2873733500B56A82 /* MainViewModel.swift in Sources */,
+				8129F1AD287B2B5A00913166 /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

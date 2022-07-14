@@ -51,7 +51,7 @@ struct Main: View {
             Spacer()
             HStack {
                 Spacer()
-                Text("Designed by Threadify")
+                Text("By Threadify")
                     .typography(.footnote)
                     .foregroundColor(.textPrimary)
             }

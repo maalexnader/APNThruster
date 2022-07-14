@@ -10,6 +10,7 @@ import Foundation
 final class APShell {
     
     // https://stackoverflow.com/questions/26971240/how-do-i-run-a-terminal-command-in-a-swift-script-e-g-xcodebuild
+    // https://github.com/JohnSundell/ShellOut/blob/master/Sources/ShellOut.swift
     func run(_ command: String) throws -> String {
         let task = Process()
         let pipe = Pipe()
@@ -17,8 +18,8 @@ final class APShell {
         task.standardOutput = pipe
         task.standardInput = nil
         task.standardError = pipe
-        task.arguments = ["/path/to/my/file"]
-        task.executableURL = URL(fileURLWithPath: "/usr/bin/ibtool")
+        task.arguments = ["-c", command]
+        task.executableURL = URL(fileURLWithPath: "/bin/bash")
         
         try task.run()
         

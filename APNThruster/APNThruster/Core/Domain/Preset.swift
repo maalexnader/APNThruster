@@ -9,6 +9,7 @@
 struct Preset {
     /// The device that is stored in current `Preset` instance
     let device: String
+    let bundle: String
 }
 
 extension Preset: Codable { }

@@ -18,6 +18,12 @@ final class MainViewModel: ObservableObject {
         }
     }
     
+    @Published var bundle: String = "" {
+        didSet {
+            storeDevice()
+        }
+    }
+    
     @Published var alertTitle: String = ""
     @Published var alertSubtitle: String = ""
     @Published var alertBody: String = ""
@@ -32,10 +38,12 @@ final class MainViewModel: ObservableObject {
     
     func handlePush() {
         let notification = APNotification(
-            alert: APNotification.Alert(
-                title: alertTitle,
-                subtitle: alertSubtitle,
-                body: alertBody
+            aps: APNotification.Aps(
+                alert: APNotification.Alert(
+                    title: alertTitle,
+                    subtitle: alertSubtitle,
+                    body: alertBody
+                )
             ),
             badge: badge,
             sound: sound
@@ -43,12 +51,9 @@ final class MainViewModel: ObservableObject {
         
         if let encodedNotification = try? encoder.encode(notification) {
             if fileManager.updateApns(with: encodedNotification) {
-                // print(fileManager.apnsFilePath)
+                try? APShell().run("xcrun simctl push \(device) \(bundle) \(fileManager.apnsFilePath.path)")
             }
         }
-        
-        print("xcrun simctl push \(device) com.example.my-app \(fileManager.apnsFilePath.path)")
-        print(try? APShell().run("xcrun simctl push \(device) com.example.my-app \(fileManager.apnsFilePath.path)") ?? "Error")
     }
     
     private func loadPreset() {
@@ -59,10 +64,11 @@ final class MainViewModel: ObservableObject {
             return
         }
         device = preset.device
+        bundle = preset.bundle
     }
     
     private func storeDevice() {
-        let preset = Preset(device: device)
+        let preset = Preset(device: device, bundle: bundle)
         if let encodedPreset = try? encoder.encode(preset) {
             _ = fileManager.updatePreset(with: encodedPreset)
         }

@@ -18,6 +18,7 @@ struct Main: View {
             ScrollView {
                 VStack(spacing: 24) {
                     Input(title: "device", value: $model.device)
+                    Input(title: "bundle", value: $model.bundle)
                     VStack(alignment: .leading) {
                         Text("alert")
                             .typography(.subheading)

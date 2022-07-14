@@ -8,7 +8,7 @@
 /// A **nottification** that will be pushed to selected devcie
 struct APNotification {
     /// The alert of the `APNotification` instance
-    let alert: Alert?
+    let aps: Aps?
     
     /// The badge that will be shown on the application icon
     let badge: String?
@@ -27,8 +27,14 @@ struct APNotification {
         /// The body o fthe notification
         let body: String?
     }
+    
+    struct Aps {
+        let alert: Alert?
+    }
 }
 
 extension APNotification.Alert: Codable { }
+
+extension APNotification.Aps: Codable { }
 
 extension APNotification: Codable { }

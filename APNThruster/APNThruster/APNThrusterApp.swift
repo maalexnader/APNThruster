@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct APNThrusterApp: App {
+    @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    
     private let width: CGFloat = 470
     private let height: CGFloat = 720
     
@@ -16,8 +18,8 @@ struct APNThrusterApp: App {
         WindowGroup {
             Main(
                 model: MainViewModel(
-                    encoder: APJSONEncoder(),
-                    fileManager: APFileManager()
+                    encoder: appDelegate.container.resolve(Encoder.self)!,
+                    fileManager: appDelegate.container.resolve(FileManager.self)!
                 )
             )
             .frame(

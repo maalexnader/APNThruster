@@ -30,6 +30,7 @@
 		81657E7F2879FFF700443D41 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E7E2879FFF700443D41 /* Encoder.swift */; };
 		81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E80287A00CE00443D41 /* APJSONEncoder.swift */; };
 		81C96CF5287EDA8700E8E132 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C96CF4287EDA8700E8E132 /* Preset.swift */; };
+		81D0D35028819F0100BFBB0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0D34F28819F0100BFBB0F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		81657E7E2879FFF700443D41 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		81657E80287A00CE00443D41 /* APJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APJSONEncoder.swift; sourceTree = "<group>"; };
 		81C96CF4287EDA8700E8E132 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		81D0D34F28819F0100BFBB0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				81174CA0286F2D720090D7AA /* Assets.xcassets */,
 				81174CA5286F2D720090D7AA /* APNThruster.entitlements */,
 				81174CA2286F2D720090D7AA /* Preview Content */,
+				81D0D34F28819F0100BFBB0F /* AppDelegate.swift */,
 			);
 			path = APNThruster;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */,
 				8129F1AB287B295000913166 /* APFileManager.swift in Sources */,
 				8129F1A9287B283100913166 /* FileManager.swift in Sources */,
+				81D0D35028819F0100BFBB0F /* AppDelegate.swift in Sources */,
 				81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */,
 				81174CC9286F2D9D0090D7AA /* Notification.swift in Sources */,
 				8129F1A6287B26F700913166 /* EncoderMock.swift in Sources */,

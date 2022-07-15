@@ -39,7 +39,7 @@ final class MainViewModel: ObservableObject {
     func handlePush() {
         let notification = APNotification(
             aps: APNotification.Aps(
-                alert: APNotification.Alert(
+                alert: APNotification.Aps.Alert(
                     title: alertTitle,
                     subtitle: alertSubtitle,
                     body: alertBody

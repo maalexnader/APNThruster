@@ -7,7 +7,7 @@
 
 /// A **nottification** that will be pushed to selected devcie
 struct APNotification {
-    /// The alert of the `APNotification` instance
+    /// The aps key of the `APNotification` instance
     let aps: Aps?
     
     /// The badge that will be shown on the application icon
@@ -16,24 +16,25 @@ struct APNotification {
     /// The sound produced when the notification delivered
     let sound: String?
     
-    /// An **alert** part
-    struct Alert {
-        /// The title of the notification
-        let title: String?
-        
-        /// The subtitle of the notification
-        let subtitle: String?
-        
-        /// The body o fthe notification
-        let body: String?
-    }
-    
+    /// An **aps key** part
     struct Aps {
         let alert: Alert?
+        
+        /// An **alert** part
+        struct Alert {
+            /// The title of the notification
+            let title: String?
+            
+            /// The subtitle of the notification
+            let subtitle: String?
+            
+            /// The body o fthe notification
+            let body: String?
+        }
     }
 }
 
-extension APNotification.Alert: Codable { }
+extension APNotification.Aps.Alert: Codable { }
 
 extension APNotification.Aps: Codable { }
 

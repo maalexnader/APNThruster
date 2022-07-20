@@ -70,7 +70,8 @@ struct Main_Previews: PreviewProvider {
                 model:
                     MainViewModel(
                         encoder: EncoderMock(),
-                        fileManager: FileManagerMock()
+                        fileManager: FileManagerMock(),
+                        shell: ShellMock()
                     )
             )
             .frame(width: 430, height: 710)

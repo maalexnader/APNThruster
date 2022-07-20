@@ -27,10 +27,13 @@
 		8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */; };
 		8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD8028706A5E00FCC369 /* InputElement.swift */; };
 		8137CD83287219F900FCC369 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8137CD82287219F900FCC369 /* Color+.swift */; };
+		813B70F8288532A3001B3CD2 /* ShellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B70F7288532A3001B3CD2 /* ShellMock.swift */; };
 		81657E7F2879FFF700443D41 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E7E2879FFF700443D41 /* Encoder.swift */; };
 		81657E81287A00CE00443D41 /* APJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81657E80287A00CE00443D41 /* APJSONEncoder.swift */; };
 		81C96CF5287EDA8700E8E132 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C96CF4287EDA8700E8E132 /* Preset.swift */; };
 		81D0D35028819F0100BFBB0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0D34F28819F0100BFBB0F /* AppDelegate.swift */; };
+		81D0D3522881A1F300BFBB0F /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D0D3512881A1F300BFBB0F /* Shell.swift */; };
+		81D426DF288850B80021701D /* APJSONEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D426DE288850B80021701D /* APJSONEncoderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +77,13 @@
 		8137CD7D2870652700FCC369 /* DefaultInputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultInputStyle.swift; sourceTree = "<group>"; };
 		8137CD8028706A5E00FCC369 /* InputElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputElement.swift; sourceTree = "<group>"; };
 		8137CD82287219F900FCC369 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		813B70F7288532A3001B3CD2 /* ShellMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellMock.swift; sourceTree = "<group>"; };
 		81657E7E2879FFF700443D41 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
 		81657E80287A00CE00443D41 /* APJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APJSONEncoder.swift; sourceTree = "<group>"; };
 		81C96CF4287EDA8700E8E132 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		81D0D34F28819F0100BFBB0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81D0D3512881A1F300BFBB0F /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		81D426DE288850B80021701D /* APJSONEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APJSONEncoderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 		81174CAD286F2D720090D7AA /* APNThrusterTests */ = {
 			isa = PBXGroup;
 			children = (
+				81D426DD288850800021701D /* Core */,
 				81174CAE286F2D720090D7AA /* APNThrusterTests.swift */,
 			);
 			path = APNThrusterTests;
@@ -229,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				8129F1AF287B3D2200913166 /* APShell.swift */,
+				81D0D3512881A1F300BFBB0F /* Shell.swift */,
+				813B70F7288532A3001B3CD2 /* ShellMock.swift */,
 			);
 			path = Shell;
 			sourceTree = "<group>";
@@ -249,6 +258,14 @@
 				8129F1A5287B26F700913166 /* EncoderMock.swift */,
 			);
 			path = Encoder;
+			sourceTree = "<group>";
+		};
+		81D426DD288850800021701D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				81D426DE288850B80021701D /* APJSONEncoderTests.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,10 +408,12 @@
 				8129F1B0287B3D2200913166 /* APShell.swift in Sources */,
 				8137CD83287219F900FCC369 /* Color+.swift in Sources */,
 				81C96CF5287EDA8700E8E132 /* Preset.swift in Sources */,
+				813B70F8288532A3001B3CD2 /* ShellMock.swift in Sources */,
 				81657E7F2879FFF700443D41 /* Encoder.swift in Sources */,
 				81174C9F286F2D6F0090D7AA /* MainView.swift in Sources */,
 				8137CD8128706A5E00FCC369 /* InputElement.swift in Sources */,
 				81174C9D286F2D6F0090D7AA /* APNThrusterApp.swift in Sources */,
+				81D0D3522881A1F300BFBB0F /* Shell.swift in Sources */,
 				81174CD3286F2FE20090D7AA /* Text+Typography.swift in Sources */,
 				8137CD7E2870652700FCC369 /* DefaultInputStyle.swift in Sources */,
 				8129F1AB287B295000913166 /* APFileManager.swift in Sources */,
@@ -413,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81174CAF286F2D720090D7AA /* APNThrusterTests.swift in Sources */,
+				81D426DF288850B80021701D /* APJSONEncoderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

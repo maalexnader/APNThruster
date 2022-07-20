@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class APShell {
+final class APShell: Shell {
     
     // https://stackoverflow.com/questions/26971240/how-do-i-run-a-terminal-command-in-a-swift-script-e-g-xcodebuild
     // https://github.com/JohnSundell/ShellOut/blob/master/Sources/ShellOut.swift

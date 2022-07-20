@@ -19,7 +19,8 @@ struct APNThrusterApp: App {
             Main(
                 model: MainViewModel(
                     encoder: appDelegate.container.resolve(Encoder.self)!,
-                    fileManager: appDelegate.container.resolve(FileManager.self)!
+                    fileManager: appDelegate.container.resolve(FileManager.self)!,
+                    shell: appDelegate.container.resolve(Shell.self)!
                 )
             )
             .frame(

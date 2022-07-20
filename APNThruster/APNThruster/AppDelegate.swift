@@ -13,6 +13,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let container = Container()
         container.register(FileManager.self) { _ in APFileManager() }
         container.register(Encoder.self) { _ in APJSONEncoder() }
+        container.register(Shell.self) { _ in APShell() }
         return container
     }()
     

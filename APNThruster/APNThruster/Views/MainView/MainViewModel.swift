@@ -11,6 +11,7 @@ import Combine
 final class MainViewModel: ObservableObject {
     private let encoder: Encoder
     private let fileManager: FileManager
+    private let shell: Shell
     
     @Published var device: String = "" {
         didSet {
@@ -30,9 +31,10 @@ final class MainViewModel: ObservableObject {
     @Published var badge: String = ""
     @Published var sound: String = ""
     
-    init(encoder: Encoder, fileManager: FileManager) {
+    init(encoder: Encoder, fileManager: FileManager, shell: Shell) {
         self.encoder = encoder
         self.fileManager = fileManager
+        self.shell = shell
         loadPreset()
     }
     
@@ -51,7 +53,7 @@ final class MainViewModel: ObservableObject {
         
         if let encodedNotification = try? encoder.encode(notification) {
             if fileManager.updateApns(with: encodedNotification) {
-                try? APShell().run("xcrun simctl push \(device) \(bundle) \(fileManager.apnsFilePath.path)")
+                _ = try? shell.run("xcrun simctl push \(device) \(bundle) \(fileManager.apnsFilePath.path)")
             }
         }
     }
